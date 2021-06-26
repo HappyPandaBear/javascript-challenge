@@ -24,7 +24,6 @@ var inputText = d3.select("#datetime")
 var button = d3.select("filter-btn")
 
 function changeHandler(){
-    d3.event.preventDefault();
     console.log(inputText.property("value"));
     var result_table = tableData.filter(UFOsightings => UFOsightings.datetime===inputText.property("value"))
     sightingData(result_table)
